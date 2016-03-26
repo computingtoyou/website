@@ -14,8 +14,6 @@ module.exports = function(grunt) {
         },
         files: {
           'public/js/script.js': ['source_js/script.js'],
-          'public/js/app.js': ['source_js/app.js'],
-          'public/js/controllers.js': ['source_js/controllers.js'],
           'public/js/materialize.js': ['source_js/materialize.js']
         } //files
       } //my_target
