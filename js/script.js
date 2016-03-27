@@ -4,7 +4,6 @@ var caption = captions[0];
 var pos = 0;
 var userString = "";
 var startTyping = true;
-var IntroSection = 623;
 var typeTimeout = null;
 
 $(document).ready(function() {
