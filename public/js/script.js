@@ -1,1 +1,65 @@
-function type(){captionEl.html(caption.substr(0,captionLength++)),captionLength<caption.length+1?setTimeout("type()",50):pos!=captions.length-1&&setTimeout("erase()",2e3)}function erase(){captionEl.html(caption.substr(0,captionLength--)),captionLength>=0?setTimeout("erase()",50):(captionLength=0,pos++,pos<captions.length&&(caption=captions[pos],setTimeout("type()",500)))}function cursorAnimation(){$("#cursor").animate({opacity:0},"fast","swing").animate({opacity:1},"fast","swing")}var captionLength=0,captions=Array("BOYS","GIRLS","KIDS","TEENS","STUDENTS","POOR","EVERYONE","YOU"),caption=captions[0],pos=0;$(document).ready(function(){setInterval("cursorAnimation()",600),captionEl=$("#caption"),type()}),$("nav li a").click(function(event){event.preventDefault();var dest=0,navbar_size=64;dest=$(this.hash).offset().top>$(document).height()-$(window).height()?$(document).height()-$(window).height():$(this.hash).offset().top,dest-=navbar_size,$("html,body").animate({scrollTop:dest},500,"swing")});
+var captionLength = 0;
+var captions = Array('BOYS', 'GIRLS', 'KIDS', 'TEENS', 'STUDENTS', 'POOR', 'EVERYONE', 'YOU');
+var caption = captions[0];
+var pos = 0;
+
+$(document).ready(function() {
+  setInterval ('cursorAnimation()', 600);
+  captionEl = $('#caption');
+  type();
+});
+
+// Navbar click listener - Smooth scroll
+
+$("nav li a").click(function(event) {
+  event.preventDefault();
+
+  var dest = 0;
+  var navbar_size = 64;
+
+  if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+    dest = $(document).height() - $(window).height();
+  }
+  else {
+    dest = $(this.hash).offset().top;
+  }
+
+  // Removes the navbar size of the destination;
+  dest = dest - navbar_size;
+  $('html,body').animate({scrollTop:dest}, 500, 'swing');
+});
+
+/* Typing effects */
+function type() {
+  captionEl.html(caption.substr(0, captionLength++));
+  if(captionLength < caption.length+1) {
+    setTimeout('type()', 50);
+  } else {
+    if (pos != (captions.length - 1)) {
+        setTimeout('erase()', 2000);
+    }
+  }
+}
+
+function erase() {
+  captionEl.html(caption.substr(0, captionLength--));
+  if(captionLength >= 0) {
+    setTimeout('erase()', 50);
+  } else {
+    captionLength = 0;
+    pos++;
+    if (pos < captions.length) {
+      caption = captions[pos];
+      setTimeout('type()', 500);
+    }
+  }
+}
+
+function cursorAnimation() {
+  $('#cursor').animate({
+    opacity: 0
+  }, 'fast', 'swing').animate({
+    opacity: 1
+  }, 'fast', 'swing');
+}
+/* END - Typing effects */
