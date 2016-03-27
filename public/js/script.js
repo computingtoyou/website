@@ -5,30 +5,34 @@ var pos = 0;
 var userString = "";
 var startTyping = true;
 var IntroSection = 623;
+var typeTimeout = null;
 
 $(document).ready(function() {
 
   setInterval ('cursorAnimation()', 600);
   captionEl = $('#caption');
+  type();
 
   $(document).keydown(function(e){
-    startTyping = false;
-    if(e.keyCode == 8){
-      e.preventDefault();
-      if(userString != ""){
-        userString = userString.slice(0,-1);
-      }
-    }
-      userString += String.fromCharCode(e.keyCode);
-      captionEl.html(userString.toUpperCase());
-      if(e.keyCode == 13){
-        startTyping = true;
-        captions.push(userString.slice(0,-1));
-        type();
-      }
-  });
+    if (isInfoVisible()) {
+      clearTimeout(typeTimeout);
+      startTyping = false;
 
-    type();
+      if(e.keyCode == 8){ //backspace
+        e.preventDefault();
+        if(userString != ""){
+          userString = userString.slice(0,-1);
+        }
+      }
+      else {
+        userString += String.fromCharCode(e.keyCode);
+      }
+
+      captionEl.html(userString.toUpperCase());
+
+      typeTimeout = setTimeout('addToCaptionArray()', 2000);
+    }
+  });
 });
 
 // Navbar click listener - Smooth scroll
@@ -69,19 +73,17 @@ function type() {
 }
 
 function erase() {
-    if(startTyping == true){
-      captionEl.html(caption.substr(0, captionLength--));
-      if(captionLength >= 0) {
-        setTimeout('erase()', 50);
-      } else {
-        captionLength = 0;
-        pos++;
-        if (pos < captions.length) {
-          caption = captions[pos];
-          setTimeout('type()', 500);
-        }
-      }
+  if(startTyping == true){
+    captionEl.html(caption.substr(0, captionLength--));
+    if(captionLength >= 0) {
+      setTimeout('erase()', 50);
+    } else {
+      captionLength = 0;
+      pos = pos < (captions.length - 1) ? pos + 1 : 0;
+      caption = captions[pos];
+      setTimeout('type()', 500);
     }
+  }
 }
 
 function cursorAnimation() {
@@ -90,5 +92,27 @@ function cursorAnimation() {
   }, 'fast', 'swing').animate({
     opacity: 1
   }, 'fast', 'swing');
+}
+
+function isInfoVisible() {
+  var $elem = $('#caption');
+  var $window = $(window);
+
+  var docViewTop = $window.scrollTop();
+  var docViewBottom = docViewTop + $window.height();
+
+  var elemTop = $elem.offset().top;
+  var elemBottom = elemTop + $elem.height();
+
+  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+function addToCaptionArray() {
+  captions.push(captionEl.text());
+  userString = "";
+  caption = captionEl.text();
+  captionLength = caption.length;
+  startTyping = true;
+  erase();
 }
 /* END - Typing effects */
