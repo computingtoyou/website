@@ -61,9 +61,17 @@ nav {
   color: $color-blue;
 }
 
+.color-yellow{
+  color: $color-yellow;
+}
+
 .bold {
   font-weight: 700;
   font-size: 1.3em;
+}
+
+.images-grid{
+  max-width: 200px;
 }
 
 #caption {

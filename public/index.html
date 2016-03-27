@@ -81,10 +81,115 @@
             <br><br>
           </div>
         </div>
-
-
       </div>
 		</section>
+
+    <section id="equipe" class="full-width full-height">
+      <div class="container">
+        <h4 class="center-align thick">Equipe</h4><br><br>
+
+        <div class="row">
+          <div class="col l12 s12 center-align">
+            <i class="fa fa-users fa-5x color-yellow"></i>
+
+            <p>Um projeto grande como esse não se faz sozinho. Somos mais de 10 participantes, dentre professores e estudantes da
+              <b>UFSCar Sorocaba</b>, dispostos a levar a computação até as escolas.
+            </p>
+            <p>
+              Nossa equipe está dividida em grupos que fazem o <b>estudo</b> de plataformas, <b>planejamento e aplicação</b> das atividades e
+              <b>desenvolvimento</b> de materiais de divulgação do projeto.
+            </p>
+          </div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col s12 l6 center">
+            <a class="waves-effect waves-light btn amber accent-4 col s8 offset-s2" href="">Conheça a equipe</a><br><br>
+          </div>
+          <div class="col s12 l6 center">
+            <a class="waves-effect waves-light btn amber accent-4 col s8 offset-s2" href="">Quero participar</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="parceiros" class="full-width full-height">
+      <div class="container">
+        <h4 class="center-align thick">Parceiros</h4><br><br>
+        <p class="center-align">
+          Além de nossa equipe, há empresas e entidades que compartilham da idéia de que a computação deve ser do conhecimento de todos:
+        </p><br><br>
+        <div class="row">
+          <div class="col l4 s12 center">
+            <img class="images-grid" src="./img/logo-ufscar.png" alt=""><br><br>
+          </div>
+          <div class="col l4 s12 center">
+            <img class="images-grid" src="./img/dcomp.png" alt=""><br><br>
+          </div>
+          <div class="col l4 s12 center">
+            <img class="images-grid" src="./img/fit.png" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l4 s12 center">
+            <img class="images-grid" src="./img/microsoft.png" alt=""><br><br>
+          </div>
+          <div class="col l4 s12 center">
+            <img class="images-grid" src="./img/google.png" alt=""><br><br>
+          </div>
+          <div class="col l4 s12 center">
+            <img class="images-grid" src="./img/twitter.png" alt=""><br><br>
+          </div>
+        </div>
+      </div>
+      <div class="row center">
+        <div class="col s12 l4 offset-l4">
+            <a class="waves-effect waves-light btn blue col s8 offset-s2" href="">Quero ser um parceiro</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="email" class="full-width full-height">
+      <div class="container">
+        <h4 class="center-align thick">Contato</h4><br><br>
+        <h5 class="center-align thick">
+          Se interessou pelo nosso projeto? Envie uma mensagem!
+        </h5><br><br>
+        <form action="" method="post">
+          <div class="row">
+            <div class=" input-field col s12 l6 offset-l3">
+              <input id="nome" type="text">
+              <label for="nome">Nome</label>
+            </div>
+            <div class=" input-field col s12 l6 offset-l3">
+              <input id="email" type="email">
+              <label for="email">Email</label>
+            </div>
+              <div class="input-field col s12 l6 offset-l3">
+                <select>
+                  <option value="" disabled selected>Escolha um assunto</option>
+                  <option value="1">Assunto 1</option>
+                  <option value="2">Assunto 2</option>
+                  <option value="3">Assunto 3</option>
+                </select>
+                <label>Assunto</label>
+            </div>
+            <div class="input-field col s12 l6 offset-l3">
+              <textarea id="mensagem" class="materialize-textarea"></textarea>
+              <label for="mensagem">Mensagem</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class=" col s12 l4 offset-l4">
+              <button class="btn waves-effect waves-light pink lighten-1 col s8 offset-s2" type="submit" name="action">Enviar
+                <i class="fa fa-paper-plane right"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
 
   </main>
 
@@ -93,5 +198,12 @@
   <script src="./js/materialize.js"></script>
   <script src="./js/script.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      //ativa select do materialize
+      $('select').material_select();
+    });
+  </script>
 </body>
 </html>
