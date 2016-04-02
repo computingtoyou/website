@@ -13018,6 +13018,16 @@ p {
   font-size: 1.2em;
 }
 
+/* line 87, ../../sass/_base.scss */
+.chip {
+  margin-bottom: 5px;
+}
+
+/* line 91, ../../sass/_base.scss */
+.card-title {
+  line-height: 30px !important;
+}
+
 /*
   NOTE: Do not touch this file. Write the bulk of your custom styles
   in _base.scss
