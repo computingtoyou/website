@@ -46,7 +46,7 @@ nav {
 
 .full-height {
 	min-height: calc(100vh - 64px);
-	padding-top: 64px;
+	padding-top: 40px;
 }
 
 .color-green {
@@ -70,10 +70,16 @@ nav {
   font-size: 1.3em;
 }
 
-.images-grid{
+.images-grid {
   max-width: 200px;
+  max-height: 100px;
+  margin-bottom: 50px;
 }
 
 #caption {
   color: $secondary-color;
+}
+
+p {
+  font-size: 1.2em;
 }
