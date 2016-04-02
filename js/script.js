@@ -32,6 +32,10 @@ $(document).ready(function() {
       typeTimeout = setTimeout('addToCaptionArray()', 2000);
     }
   });
+
+  window.sr = ScrollReveal({ reset: false, distance: '100px' });
+  sr.reveal('.reveal-l', {delay: 300});
+  sr.reveal('.reveal-r', {delay: 400});
 });
 
 // Navbar click listener - Smooth scroll

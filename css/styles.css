@@ -9622,7 +9622,7 @@ small {
 }
 /* line 50, ../../sass/components/_buttons.scss */
 .btn:hover, .btn-large:hover {
-  background-color: #01ff83;
+  background-color: #00ff83;
 }
 
 /* line 57, ../../sass/components/_buttons.scss */
@@ -12972,7 +12972,7 @@ body {
 /* line 47, ../../sass/_base.scss */
 .full-height {
   min-height: calc(100vh - 64px);
-  padding-top: 64px;
+  padding-top: 40px;
 }
 
 /* line 52, ../../sass/_base.scss */
@@ -13004,11 +13004,18 @@ body {
 /* line 73, ../../sass/_base.scss */
 .images-grid {
   max-width: 200px;
+  max-height: 100px;
+  margin-bottom: 50px;
 }
 
-/* line 77, ../../sass/_base.scss */
+/* line 79, ../../sass/_base.scss */
 #caption {
   color: #00E676;
+}
+
+/* line 83, ../../sass/_base.scss */
+p {
+  font-size: 1.2em;
 }
 
 /*
