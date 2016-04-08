@@ -9622,7 +9622,7 @@ small {
 }
 /* line 50, ../../sass/components/_buttons.scss */
 .btn:hover, .btn-large:hover {
-  background-color: #00ff83;
+  background-color: #01ff83;
 }
 
 /* line 57, ../../sass/components/_buttons.scss */
@@ -13026,6 +13026,11 @@ p {
 /* line 91, ../../sass/_base.scss */
 .card-title {
   line-height: 30px !important;
+}
+
+/* line 95, ../../sass/_base.scss */
+.role {
+  border-bottom: 2px solid #e0e0e0;
 }
 
 /*
