@@ -194,7 +194,7 @@ video.responsive-video {
 // Breadcrumbs
 .breadcrumb {
   font-size: 18px;
-  color: rgba(255,255,255, .7);
+  color: lighten($navbar-font-color, 25%);
 
   i,
   [class^="mdi-"], [class*="mdi-"],
@@ -206,7 +206,7 @@ video.responsive-video {
 
   &:before {
     content: '\E5CC';
-    color: rgba(255,255,255, .7);
+    color: lighten($navbar-font-color, 25%);
     vertical-align: top;
     display: inline-block;
     font-family: 'Material Icons';
@@ -222,7 +222,7 @@ video.responsive-video {
   }
 
   &:last-child {
-    color: #fff;
+    color: $navbar-font-color;
   }
 }
 

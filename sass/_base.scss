@@ -7,6 +7,17 @@ body {
 
 nav {
   // background-color: transparent !important;
+  a {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+footer {
+  i:hover {
+    @include transition(all, 0.3s);
+    color: $color-blue-dark;
+  }
 }
 
 a {
