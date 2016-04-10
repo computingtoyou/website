@@ -4,3 +4,11 @@
 	-o-background-size: $size;
 	background-size: $size;
 }
+
+@mixin transition($type, $time) {
+	-webkit-transition: $type $time;
+	-moz-transition: $type $time;
+	-ms-transition: $type $time;
+	-o-transition: $type $time;
+	transition: $type $time;
+}

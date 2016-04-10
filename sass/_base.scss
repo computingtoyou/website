@@ -9,6 +9,10 @@ nav {
   // background-color: transparent !important;
 }
 
+a {
+	@include transition(all, 0.3s);
+}
+
 #intro {
   color: white;
   overflow: hidden;
@@ -94,4 +98,20 @@ p {
 
 .role{
   border-bottom: 2px solid #e0e0e0;
+}
+
+.a-hidden {
+  h5, p {
+    color: black;
+  }
+  i {
+    color: white;
+  }
+}
+
+.a-hidden:hover {
+  i {
+    @include transition(all, 0.5s);
+    color: $color-blue;
+  }
 }
