@@ -13,15 +13,19 @@ $(document).ready(function() {
   type();
 
   $(document).keydown(function(e){
-    if (isInfoVisible()) {
+    if (isInfoVisible() && isValidKey(e.keyCode)) {
       clearTimeout(typeTimeout);
       startTyping = false;
 
-      if(e.keyCode == 8){ //backspace
+      if(e.keyCode === 8){ //backspace
         e.preventDefault();
         if(userString != ""){
           userString = userString.slice(0,-1);
         }
+      }
+      else if (e.keyCode === 32) { //space
+        e.preventDefault();
+        userString += String.fromCharCode(e.keyCode);
       }
       else {
         userString += String.fromCharCode(e.keyCode);
@@ -108,6 +112,10 @@ function isInfoVisible() {
   var elemBottom = elemTop + $elem.height();
 
   return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+function isValidKey(keyCode) {
+  return ((keyCode >= 65 && keyCode <= 90) || keyCode === 8 || keyCode == 32);
 }
 
 function addToCaptionArray() {
