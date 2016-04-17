@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  // background-color: transparent !important;
+   background-color: transparent !important;
   a {
     text-transform: uppercase;
     font-weight: bold;
@@ -25,9 +25,10 @@ a {
 }
 
 #intro {
-  color: white;
+  color: black;
   overflow: hidden;
 	background: url("../img/bg.jpg") no-repeat fixed;
+  margin-top: -64px;
   @include background-size(cover);
 }
 
