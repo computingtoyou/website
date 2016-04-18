@@ -9622,7 +9622,7 @@ small {
 }
 /* line 50, ../../sass/components/_buttons.scss */
 .btn:hover, .btn-large:hover {
-  background-color: #01ff83;
+  background-color: #00ff83;
 }
 
 /* line 57, ../../sass/components/_buttons.scss */
@@ -12974,29 +12974,31 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  min-height: calc(100vh) !important;
 }
 
-/* line 44, ../../sass/_base.scss */
+/* line 45, ../../sass/_base.scss */
 .transparent-dark {
   background: rgba(0, 0, 0, 0.75);
+  min-height: calc(100vh) !important;
 }
 
-/* line 48, ../../sass/_base.scss */
+/* line 50, ../../sass/_base.scss */
 .pad-l {
   padding-left: 10px;
 }
 
-/* line 52, ../../sass/_base.scss */
+/* line 54, ../../sass/_base.scss */
 .pad-r {
   padding-right: 10px;
 }
 
-/* line 56, ../../sass/_base.scss */
+/* line 58, ../../sass/_base.scss */
 .thick {
   font-weight: 700;
 }
 
-/* line 60, ../../sass/_base.scss */
+/* line 62, ../../sass/_base.scss */
 .full-width {
   min-width: 100%;
   margin-left: auto;
@@ -13004,80 +13006,80 @@ a {
   max-width: initial;
 }
 
-/* line 67, ../../sass/_base.scss */
+/* line 69, ../../sass/_base.scss */
 .full-height {
   min-height: calc(100vh - 64px);
   padding-top: 40px;
 }
 
-/* line 72, ../../sass/_base.scss */
+/* line 74, ../../sass/_base.scss */
 .color-green {
   color: #00e676;
 }
 
-/* line 76, ../../sass/_base.scss */
+/* line 78, ../../sass/_base.scss */
 .color-pink {
   color: #ec407a;
 }
 
-/* line 80, ../../sass/_base.scss */
+/* line 82, ../../sass/_base.scss */
 .color-blue {
   color: #03a9f4;
 }
 
-/* line 84, ../../sass/_base.scss */
+/* line 86, ../../sass/_base.scss */
 .color-yellow {
   color: #f6b000;
 }
 
-/* line 88, ../../sass/_base.scss */
+/* line 90, ../../sass/_base.scss */
 .bold {
   font-weight: 700;
   font-size: 1.3em;
 }
 
-/* line 93, ../../sass/_base.scss */
+/* line 95, ../../sass/_base.scss */
 .images-grid {
   max-width: 200px;
   max-height: 100px;
   margin-bottom: 50px;
 }
 
-/* line 99, ../../sass/_base.scss */
+/* line 101, ../../sass/_base.scss */
 #caption {
   color: #00e676;
 }
 
-/* line 103, ../../sass/_base.scss */
+/* line 105, ../../sass/_base.scss */
 p {
   font-size: 1.2em;
 }
 
-/* line 107, ../../sass/_base.scss */
+/* line 109, ../../sass/_base.scss */
 .chip {
   margin-bottom: 5px;
 }
 
-/* line 111, ../../sass/_base.scss */
+/* line 113, ../../sass/_base.scss */
 .card-title {
   line-height: 30px !important;
 }
 
-/* line 115, ../../sass/_base.scss */
+/* line 117, ../../sass/_base.scss */
 .role {
   border-bottom: 2px solid #e0e0e0;
 }
 
-/* line 120, ../../sass/_base.scss */
+/* line 122, ../../sass/_base.scss */
 .a-hidden h5, .a-hidden p {
   color: black;
 }
-/* line 123, ../../sass/_base.scss */
+/* line 125, ../../sass/_base.scss */
 .a-hidden i {
   color: white;
 }
 
-/* line 129, ../../sass/_base.scss */
+/* line 131, ../../sass/_base.scss */
 .a-hidden:hover i {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
