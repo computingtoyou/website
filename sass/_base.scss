@@ -30,6 +30,7 @@ a {
 	background: url("../img/bg.jpg") no-repeat fixed;
   margin-top: -64px;
   @include background-size(cover);
+  min-height: calc(100vh) !important;
 }
 
 #projeto {
@@ -42,7 +43,8 @@ a {
 }
 
 .transparent-dark {
-background:rgba(0,0,0,0.75);
+  background:rgba(0,0,0,0.75);
+  min-height: calc(100vh) !important;
 }
 
 .pad-l {
