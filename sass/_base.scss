@@ -6,10 +6,14 @@ body {
 }
 
 nav {
-   background-color: transparent !important;
+   background-color: transparent;
+   @include transition(all, 1s);
+   box-shadow: none !important;
   a {
     text-transform: uppercase;
     font-weight: bold;
+    color: white !important;
+    @include transition(all, 1s);
   }
 }
 
