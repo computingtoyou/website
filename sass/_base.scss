@@ -6,14 +6,21 @@ body {
 }
 
 nav {
-   background-color: transparent;
-   @include transition(all, 1s);
-   box-shadow: none !important;
+  background-color: white !important;
+  @include transition(all, 1s);
   a {
     text-transform: uppercase;
     font-weight: bold;
-    color: white !important;
     @include transition(all, 1s);
+    color: black !important;
+  }
+}
+
+.dy-nav {
+   background-color: transparent !important;
+   box-shadow: none !important;
+  a {
+    color: white !important;
   }
 }
 

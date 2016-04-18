@@ -41,7 +41,7 @@ $(document).ready(function() {
   sr.reveal('.reveal-l', {delay: 300});
   sr.reveal('.reveal-r', {delay: 400});
 
-  initScrollListener();
+  // initScrollListener();
 });
 
 // Navbar click listener - Smooth scroll
@@ -133,31 +133,8 @@ function addToCaptionArray() {
 
 /* Navbar coloring effects */
 
-function changeNavColors() {
-  if ($(this).scrollTop() > 200) {
-    $('nav').css('background-color', 'white');
-    $('nav a').addClass('black-text');
-    $('nav a').removeClass('white-text');
-    $('nav div').addClass('z-depth-1');
-  }
-  else {
-    $('nav').css('background-color', 'transparent');
-    $('nav a').addClass('white-text');
-    $('nav a').removeClass('black-text');
-    $('nav div').removeClass('z-depth-1');
-  }
-}
-
-function initScrollListener() {
-  if (location.pathname.substring(location.pathname.lastIndexOf("/") + 1) === "index.html") {
-    changeNavColors(); // Init colors for the first time
-    $(document).scroll(function() {
-      changeNavColors();
-    });
-  }
-  else {
-    $('nav div').addClass('z-depth-1'); // Set the navbar box-shadow
-    $('nav').css('background-color', 'white');
-    $('nav a').addClass('black-text');
-  }
-}
+// function initScrollListener() {
+//   $('nav div').addClass('z-depth-1'); // Set the navbar box-shadow
+//   $('nav').css('background-color', 'white');
+//   $('nav a').addClass('black-text');
+// }
