@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 // Navbar click listener - Smooth scroll
 
-$("nav li a").click(function(event) {
+$("nav li a, .smooth-scroll").click(function(event) {
   event.preventDefault();
 
   var dest = 0;
