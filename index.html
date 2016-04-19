@@ -14,7 +14,8 @@
 <div class="navbar-fixed">
   <nav class="dy-nav">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo"><img style="width:115px; margin-left:10px;" src="./img/Logo.png"/></a>
+      <a href="#" class="brand-logo hide-on-small-only"><img style="width:115px; margin-left:10px;" src="./img/Logo.png"/></a>
+      <a href="#" class="brand-logo hide-on-med-and-up"><img style="width:100px; margin-left:10px;" src="./img/Logo.png"/></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#projeto">O Projeto</a></li>
         <li><a href="#atividades">Atividades</a></li>
@@ -152,7 +153,7 @@
       <div class="container">
         <h4 class="center-align thick">Contato</h4>
         <p class="center-align">Se interessou pelo nosso projeto? Envie uma mensagem!</p><br>
-        <form id="emailForm" action="" method="post">
+        <form id="emailForm">
           <div class="row">
             <div class=" input-field col s12 l6 offset-l3">
               <input id="nome" type="text">
@@ -165,10 +166,10 @@
               <div class="input-field col s12 l6 offset-l3">
                 <select id="assunto">
                   <option value="" disabled selected>Escolha um assunto</option>
-                  <option value="voluntario">Quero ser voluntário</option>
-                  <option value="escola">Envolver a minha escola</option>
-                  <option value="parceria">Quero patrocinar o projeto</option>
-                  <option value="geral">Outro</option>
+                  <option value="C2Y - Contato Voluntário">Quero ser voluntário</option>
+                  <option value="C2Y - Contato Escola">Envolver a minha escola</option>
+                  <option value="C2Y - Contato Parceria">Quero patrocinar o projeto</option>
+                  <option value="C2Y - Contato - Outros">Outro</option>
                 </select>
                 <label>Assunto</label>
             </div>
@@ -179,7 +180,7 @@
           </div>
           <div class="row">
             <div class=" col s12 l4 offset-l4">
-              <button class="btn waves-effect waves-light pink lighten-1 col s8 offset-s2" type="submit" name="action">Enviar
+              <button id="send" class="btn waves-effect waves-light pink lighten-1 col s8 offset-s2">Enviar
                 <i class="fa fa-paper-plane right"></i>
               </button>
             </div>
