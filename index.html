@@ -152,7 +152,7 @@
       <div class="container">
         <h4 class="center-align thick">Contato</h4>
         <p class="center-align">Se interessou pelo nosso projeto? Envie uma mensagem!</p><br>
-        <form action="" method="post">
+        <form id="emailForm" action="" method="post">
           <div class="row">
             <div class=" input-field col s12 l6 offset-l3">
               <input id="nome" type="text">
@@ -163,7 +163,7 @@
               <label for="email">Email</label>
             </div>
               <div class="input-field col s12 l6 offset-l3">
-                <select>
+                <select id="assunto">
                   <option value="" disabled selected>Escolha um assunto</option>
                   <option value="voluntario">Quero ser voluntário</option>
                   <option value="escola">Envolver a minha escola</option>
@@ -219,6 +219,7 @@
   <script src="./js/materialize.js"></script>
   <script src="./js/scrollnav.js"></script>
   <script src="./js/script.js"></script>
+  <script src="./js/sendEmail.js"></script>
 
   <script src="http://localhost:35729/livereload.js"></script>
 
@@ -228,5 +229,6 @@
       $('select').material_select();
     });
   </script>
+
 </body>
 </html>
