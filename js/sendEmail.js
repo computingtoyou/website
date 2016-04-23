@@ -8,13 +8,12 @@ $( "#send" ).on('click', function(event) {
     _subject : $('#assunto').val(),
     mensagem : $('#mensagem').val(),
     _format : 'plain'
-    // _cc : 'tiemi@ufscar.br,lzaina@ufscar.br,lizier@ufscar.br'
   }
 
   if(validacao(dados)){
     $.ajax({
       method: "POST",
-      url: "https://formspree.io/marco.oliveira@dcomp.sor.ufscar.br",
+      url: "https://formspree.io/c2y@dcomp.sor.ufscar.br",
       data: dados,
       dataType: "json",
       success: function(data){
